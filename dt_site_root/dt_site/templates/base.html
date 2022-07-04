@@ -3,7 +3,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Untitled Document</title>
+    <title>
+        {% block title %}
+            Untitled document
+        {% endblock title %}
+    </title>
     <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -15,9 +19,11 @@
         <aside id="leftsidebar">
             <nav id="nav">
                 <ul>
-                    <li>Menu 1</li>
-                    <li>Menu 2</li>
-                    <li>Menu 3</li>
+                    {% block sidenav %}
+                    {% endblock sidenav %}
+<!--                    <li>Menu 1</li>-->
+<!--                    <li>Menu 2</li>-->
+<!--                    <li>Menu 3</li>-->
                 </ul>
             </nav>
         </aside>
