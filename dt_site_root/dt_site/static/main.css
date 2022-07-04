@@ -103,3 +103,32 @@ input {
 .required label:after {
     content: "*";
 }
+
+.quotehdr th {
+    background-color: #4C4C4C;
+    color: white;
+    text-align: center;
+    padding: 5px 1em;
+    border: none;
+}
+.quoterow td {
+    padding: 5px 1em;
+}
+.altrow {
+    background-color: #E0E0E0;
+}
+
+.quote td:first-child {
+    background-color: #4C4C4C;
+    color: white;
+    width: 10em;
+    text-align: right;
+    padding: 8px 1em;
+    border: none;
+}
+.quote td{
+    background-color: #BBBBBB;
+    padding: 0 1em;
+    color: black;
+    width: 70%;
+}

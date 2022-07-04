@@ -12,6 +12,6 @@ class QuoteForm(ModelForm):
         fields = [
             'name', 'position', 'company', 'address',
             'phone', 'email', 'web', 'description',
-            'sitestatus', 'priority', 'jobfile',
+            'sitestatus', 'priority', 'jobfile', 'quoteprice'
         ]
 
