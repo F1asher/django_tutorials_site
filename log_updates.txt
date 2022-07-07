@@ -1,0 +1,26 @@
+Create app Pages, register it in settings apps and create view named index; create urls.py in pages dir and add in with include in base url.py file.
+
+
+ Create model page in pages app, register it in pages admin and make migrations. Create superuser. Create pages (home, about, services) in siteadmin, add __str__ method in page class. App pageadmin model in admin and register in in admin.
+
+
+ In settings.py add tz, templates.dirs add "BASEDIR / 'dt_site/templates'" and create this folder; add STATICFILES_DIRS = [BASE_DIR / 'dt_site/static'] and create it. add to templates base.html, add to static main.css, edit view with render. add block content to base.html; create dir templates/pages in pages.
+
+
+ Add template urlpattern to base url.py; edit views.index import .models:Page, add context.
+assert False - need for debug
+add python block content and disable autoescape for correct display on site(without display tags). Add block title to base.html; add block title to page.html and add tag p to page.html with last_edit form. extend context page_list: Page.objects.all(); add block sidenav to base.html(left site menu with pages from third commit and add this block to page.html
+
+
+ create testform.html. create forms.py in pages dir. add URLpattern to pages.urls for form and add this form to base.html. create pages/templates file contact.html. create contact form view. edit main.css for contact form. add console_email_sender to views.py. 
+
+
+ Create the quotes app and add it to installed apps, create the class Quote model and do makemigrations and migrate, add Quote model to the admin panel and create QuoteAdmin model in admin.py file and add to the admin panel, create the quote form, create and template edit main.css, add to the base URL.py urlpattern from quotes and create URLS.py in quotes.
+
+
+ use CBV (Class Based View). add testpage to base URL.py . create the QuoteList view. add new path to quotes/urls. create the quote_list.html template and edit main.css. add method get_context to QuteList. add tag li and a with href: quote/show to base.html. create QuoteView as QuoteList with get_context but change context_obj_name on quote. add show/<int:pk> path to quotes/urls. edit main.css.
+
+
+ create author group in admin panel of site. create testuser and add it to group. create class Register. create templates: login, register, success. edit base.html for display user auth. add URLs to base URL file. edit quote/views: quote_req add @login_required(login_url=(reverse_lazy('login'))) and modify func; QuoteList, QuoteView modify classes with Mixin. add error_hanlers  to base URLs and templates/bag_request.html.
+
+
